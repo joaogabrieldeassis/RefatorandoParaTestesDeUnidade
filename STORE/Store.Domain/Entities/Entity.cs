@@ -2,7 +2,7 @@ namespace Store.Domain.Entities
 {
     public class Entity
     {
-        public Entity(Guid id)
+        public Entity()
         {
             Id = Guid.NewGuid();
         }
