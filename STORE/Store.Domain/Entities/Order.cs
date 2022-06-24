@@ -1,3 +1,5 @@
+using System.Diagnostics.Contracts;
+using Flunt.Validations;
 using Store.Domain.Enuns;
 
 namespace Store.Domain.Entities
@@ -7,6 +9,10 @@ namespace Store.Domain.Entities
         private IList<OrderItem> _itemns;
         public Order(Customer customer, decimal deliveryFee, Discount discount)
         {
+            AddNotifications(new Contract<Order>()
+                    .Requires()
+                    .IsNotNull(customer, "Customer", "Cliente invalido")
+            );
             Customer = customer;
             Date = DateTime.Now;
             Number = Guid.NewGuid().ToString().Substring(0, 8);
