@@ -1,7 +1,7 @@
 {
   "format": 1,
   "restore": {
-    "C:\\RefatorandoParaTestesDeUnidade\\STORE\\Store.Tests\\Store.Tests.csproj": {}
+    "C:\\RefatorandoParaTestesDeUnidade\\STORE\\store.tests\\Store.Tests.csproj": {}
   },
   "projects": {
     "C:\\RefatorandoParaTestesDeUnidade\\STORE\\store.domain\\store.domain.csproj": {
@@ -67,14 +67,14 @@
         }
       }
     },
-    "C:\\RefatorandoParaTestesDeUnidade\\STORE\\Store.Tests\\Store.Tests.csproj": {
+    "C:\\RefatorandoParaTestesDeUnidade\\STORE\\store.tests\\Store.Tests.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\RefatorandoParaTestesDeUnidade\\STORE\\Store.Tests\\Store.Tests.csproj",
+        "projectUniqueName": "C:\\RefatorandoParaTestesDeUnidade\\STORE\\store.tests\\Store.Tests.csproj",
         "projectName": "Store.Tests",
-        "projectPath": "C:\\RefatorandoParaTestesDeUnidade\\STORE\\Store.Tests\\Store.Tests.csproj",
+        "projectPath": "C:\\RefatorandoParaTestesDeUnidade\\STORE\\store.tests\\Store.Tests.csproj",
         "packagesPath": "C:\\Users\\Windows\\.nuget\\packages\\",
-        "outputPath": "C:\\RefatorandoParaTestesDeUnidade\\STORE\\Store.Tests\\obj\\",
+        "outputPath": "C:\\RefatorandoParaTestesDeUnidade\\STORE\\store.tests\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
