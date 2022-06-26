@@ -1,0 +1,12 @@
+C:\RefatorandoParaTestesDeUnidade\STORE\store.domain\bin\Debug\net6.0\store.domain.deps.json
+C:\RefatorandoParaTestesDeUnidade\STORE\store.domain\bin\Debug\net6.0\store.domain.dll
+C:\RefatorandoParaTestesDeUnidade\STORE\store.domain\bin\Debug\net6.0\store.domain.pdb
+C:\RefatorandoParaTestesDeUnidade\STORE\store.domain\obj\Debug\net6.0\store.domain.csproj.AssemblyReference.cache
+C:\RefatorandoParaTestesDeUnidade\STORE\store.domain\obj\Debug\net6.0\store.domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\RefatorandoParaTestesDeUnidade\STORE\store.domain\obj\Debug\net6.0\store.domain.AssemblyInfoInputs.cache
+C:\RefatorandoParaTestesDeUnidade\STORE\store.domain\obj\Debug\net6.0\store.domain.AssemblyInfo.cs
+C:\RefatorandoParaTestesDeUnidade\STORE\store.domain\obj\Debug\net6.0\store.domain.csproj.CoreCompileInputs.cache
+C:\RefatorandoParaTestesDeUnidade\STORE\store.domain\obj\Debug\net6.0\store.domain.dll
+C:\RefatorandoParaTestesDeUnidade\STORE\store.domain\obj\Debug\net6.0\refint\store.domain.dll
+C:\RefatorandoParaTestesDeUnidade\STORE\store.domain\obj\Debug\net6.0\store.domain.pdb
+C:\RefatorandoParaTestesDeUnidade\STORE\store.domain\obj\Debug\net6.0\ref\store.domain.dll

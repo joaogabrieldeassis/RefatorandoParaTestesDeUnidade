@@ -23,20 +23,28 @@ public class OrderTests
     [TestCategory("Domain")]
     public void Dado_um_novo_Pedido_seu_status_deve_ser_aguardando_pagamento()
     {
-        Assert.Fail();
+        var item = new Order(_customer, 10, _discount);
+        Assert.Equals(item.Status, EOrderStatus.WaitingPayment);
+
     }
     [TestMethod]
     [TestCategory("Domain")]
     public void Dado_um_pagamento_do_Pedido_seu_status_deve_ser_aguardando_entrega()
     {
-        Assert.Fail();
+        var delivery = new Order(_customer, 10, _discount);
+        delivery.AddItem(_order, 2);
+        delivery.Total();
+        delivery.Pay(100);
+        Assert.Equals(delivery.Status, EOrderStatus.WaitingDelivery);
     }
 
     [TestMethod]
     [TestCategory("Domain")]
     public void Dado_um_novo_Pedido_cancelado_seu_status_deve_ser_cancelado()
     {
-        Assert.Fail();
+        var canceled = new Order(_customer, 10, null);
+        Assert.Equals(canceled.Status, EOrderStatus.Canceled);
+
     }
 
 }
