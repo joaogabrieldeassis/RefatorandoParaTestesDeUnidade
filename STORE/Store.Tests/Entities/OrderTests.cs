@@ -8,7 +8,7 @@ namespace Store.Tests.Entities;
 public class OrderTests
 {
     private readonly Customer _customer = new Customer("Joao", "joaoassisgabriel@gmail.com");
-    private readonly Product _order = new Product("produto 100", 100, true);
+    private readonly Product _order = new Product("produto 100", 5, true);
     private readonly Discount _discount = new Discount(10, DateTime.Now.AddDays(5));
     [TestMethod]
     [TestCategory("Domain")]
@@ -31,7 +31,7 @@ public class OrderTests
     {
         var delivery = new Order(_customer, 0, null);
         delivery.AddItem(_order, 3);
-        delivery.Pay(300);
+        delivery.Pay(15);
         Assert.AreEqual(delivery.Status, EOrderStatus.WaitingDelivery);
     }
 
@@ -56,7 +56,15 @@ public class OrderTests
     public void Dado_um_novo_Item_com_quantidade_0_ou_menor_o_mesmo_nao_deve_ser_adicionado()
     {
         var canceled = new Order(_customer, 0, null);
-        canceled.AddItem(null, 0);
+        canceled.AddItem(_order, 0);
         Assert.AreEqual(canceled.Itemns.Count, 0);
+    }
+    [TestMethod]
+    [TestCategory("Domain")]
+    public void Dado_um_novo_pedido_valido_seu_total_deve_ser_50()
+    {
+        var request = new Order(_customer, 10, _discount);
+        request.AddItem(_order, 10);
+        Assert.AreEqual(request.Total(), 50);
     }
 }
