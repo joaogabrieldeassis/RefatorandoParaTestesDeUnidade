@@ -47,8 +47,7 @@ namespace Store.Domain.Entities
         {
             this.Status = EOrderStatus.Canceled;
         }
-        public Customer Customer
-        { get; private set; }
+        public Customer Customer { get; private set; }
         public DateTime Date { get; private set; }
         public string Number { get; private set; }
         public IReadOnlyCollection<OrderItem> Itemns { get { return _itemns.ToArray(); } }
