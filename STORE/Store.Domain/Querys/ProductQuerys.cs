@@ -9,5 +9,9 @@ namespace Store.Domain.Querys
         {
             return x => x.Active;
         }
+        public static Expression<Func<Product, bool>> GetInactiveProducts()
+        {
+            return x => x.Active == false;
+        }
     }
 }
