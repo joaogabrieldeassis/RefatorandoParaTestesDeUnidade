@@ -9,7 +9,7 @@ public class OrderTests
 {
     private readonly Customer _customer = new Customer("Joao", "joaoassisgabriel@gmail.com");
     private readonly Product _order = new Product("produto 100", 5, true);
-    private readonly Discount _discount = new Discount(10, DateTime.Now.AddDays(5));
+    private readonly Discount _discount = new Discount(10, DateTime.Now.AddDays(2));
     [TestMethod]
     [TestCategory("Domain")]
     public void Dado_um_novo_Pedido_valido_ele_deve_gerar_um_numero_de_8_caracters()
@@ -66,5 +66,51 @@ public class OrderTests
         var request = new Order(_customer, 10, _discount);
         request.AddItem(_order, 10);
         Assert.AreEqual(request.Total(), 50);
+    }
+    [TestMethod]
+    [TestCategory("Domain")]
+    public void Dado_um_desconto_expirado_o_valor_do_pedido_deve_ser_60_()
+    {
+        var discount = new Discount(5, DateTime.Now.AddDays(-2));
+        var request = new Order(_customer, 10, discount);
+        request.AddItem(_order, 10);
+        Assert.AreEqual(request.Total(), 60);
+    }
+    [TestMethod]
+    [TestCategory("Domain")]
+    public void Testando_um_desconto_invalido()
+    {
+        var discount = new Discount(-3, DateTime.Now.AddDays(-2));
+        var request = new Order(_customer, 10, discount);
+        request.AddItem(_order, 10);
+        request.Cancel();
+        Assert.AreEqual(request.Status, EOrderStatus.Canceled);
+    }
+    [TestMethod]
+    [TestCategory("Domain")]
+    public void Dado_um_desconto_de_10_o_seu_valor_deve_ser_50()
+    {
+        var discount = new Discount(10, DateTime.Now.AddDays(5));
+        var order = new Order(_customer, 0, discount);
+        var product = new Product("Web-cã", 60, true);
+        order.AddItem(product, 1);
+        Assert.AreEqual(order.Total(), 50);
+    }
+    [TestMethod]
+    [TestCategory("Domain")]
+    public void Dado_uma_taxa_de_entrega_de_10_o_valor_do_pedido_deve_ser_60()
+    {
+
+        var order = new Order(_customer, 10, _discount);
+        order.AddItem(_order, 12);
+        Assert.AreEqual(order.Total(), 60);
+    }
+    [TestMethod]
+    [TestCategory("Domain")]
+    public void Dado_um_pedido_sem_cliente_o_mesmo_deve_ser_invalido()
+    {
+
+        var order = new Order(null, 10, _discount);
+        Assert.AreEqual(order.IsValid, false);
     }
 }
