@@ -2,12 +2,13 @@ using System.Diagnostics.Contracts;
 using System.Windows.Input;
 using Flunt.Notifications;
 using Flunt.Validations;
+using Store.Domain.Commands.Interfaces;
 
 namespace Store.Domain.Commands
 {
-    public class CreateOrderItemCommand : Notifiable<Notification>, ICommand
+    public class CreateOrderItemCommand : Notifiable<Notification>, ICommands
     {
-        CreateOrderItemCommand() { }
+        public CreateOrderItemCommand() { }
         public CreateOrderItemCommand(Guid product, int quantity)
         {
             Product = product;
@@ -16,26 +17,15 @@ namespace Store.Domain.Commands
         public Guid Product { get; set; }
         public int Quantity { get; set; }
 
-        public event EventHandler? CanExecuteChanged;
 
         public void Validate()
         {
             AddNotifications(new Contract<CreateOrderItemCommand>()
             .Requires()
-            .HasLen(Product.ToString(), 32, "Product", "Produto invalido")
+
             .IsGreaterThan(Quantity, 0, "Quantity", "Quantidade invalida")
             );
         }
 
-
-        public bool CanExecute(object? parameter)
-        {
-            throw new NotImplementedException();
-        }
-
-        public void Execute(object? parameter)
-        {
-            throw new NotImplementedException();
-        }
     }
 }

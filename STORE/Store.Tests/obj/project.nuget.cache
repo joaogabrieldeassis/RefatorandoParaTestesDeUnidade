@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "1G8r9Y3mrrVK1CAy4i8UTf/CDFvnKTT65Xg67d7HFquMDWgP8bxkwSeMjaShC6C345M3IpZE6hsw2zT5iwZAaA==",
+  "dgSpecHash": "lWaWsHZWlUqInyRbtnTBTMp71FjXVfQYio8rU4SgFj1LVoR2b8kkd8E3PJ1DuMwREW0ZSDKh8xh4tzMfGXSkww==",
   "success": true,
-  "projectFilePath": "C:\\RefatorandoParaTestesDeUnidade\\STORE\\Store.Tests\\Store.Tests.csproj",
+  "projectFilePath": "C:\\RefatorandoParaTestesDeUnidade\\STORE\\store.tests\\Store.Tests.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Windows\\.nuget\\packages\\coverlet.collector\\3.1.0\\coverlet.collector.3.1.0.nupkg.sha512",
     "C:\\Users\\Windows\\.nuget\\packages\\flunt\\2.0.5\\flunt.2.0.5.nupkg.sha512",
